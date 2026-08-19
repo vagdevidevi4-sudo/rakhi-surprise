@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="rakhi.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rakhi Surprise ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Falling hearts -->
+    <div class="hearts"></div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification" onclick="openMessage()">
+
+        <div class="notification-header">
+            🔔 Your favorite sister, Siri ❤️
+        </div>
+
+        <div class="notification-text">
+            I sent you your Rakhi 📿
+            <br>
+            Did you get it? Tap to open 💌
+        </div>
+
+        <div class="tap">
+            Tap here 💕
+        </div>
+
+    </div>
+
+
+    <!-- Main message -->
+    <div class="message" id="message">
+
+        <div class="rakhi">📿</div>
+
+        <h1>
+            Did you get the Rakhi
+            <br>
+            I sent you? 🥹❤️
+        </h1>
+
+        <p>
+            Be honest... 👀
+        </p>
+
+
+        <div class="buttons">
+
+            <button class="yes" onclick="yesClicked()">
+                🟢 YES, I GOT IT!
+            </button>
+
+            <button
+                class="no"
+                id="noButton"
+                onmouseover="moveButton()"
+                onclick="noClicked()">
+                🔴 NOT YET 😭
+            </button>
+
+        </div>
+
+
+        <div id="response"></div>
+
+        <button class="musicButton" onclick="toggleMusic()">
+            🎵 Play Music
+        </button>
+
+    </div>
+
+
+    <!-- Final surprise -->
+    <div class="surprise" id="surprise">
+
+        <div class="big-rakhi">
+            📿
+        </div>
+
+        <h1>
+            Happy Raksha Bandhan! 🎀
+        </h1>
+
+        <p>
+            YAYYYY! 🥹❤️
+            <br><br>
+
+            Your Rakhi reached you! 📿✨
+            <br><br>
+
+            Lots and lots of love,
+            <br>
+
+            <strong>
+                Your sister Siri ❤️
+            </strong>
+        </p>
+
+        <div class="celebrate">
+            🎉 ❤️ 🎊 💕 🎉
+        </div>
+
+    </div>
+
+
+    <!-- Background music -->
+    <audio id="music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
