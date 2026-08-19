@@ -1,0 +1,472 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #ffd6e7,
+        #ffeaf3,
+        #fff5fa
+    );
+
+    overflow: hidden;
+
+    padding: 20px;
+}
+
+
+/* -------------------------
+   NOTIFICATION
+------------------------- */
+
+.notification {
+
+    width: 370px;
+
+    background: rgba(255,255,255,0.95);
+
+    border-radius: 22px;
+
+    padding: 22px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.15);
+
+    cursor: pointer;
+
+    animation: notificationPop 0.7s ease;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+.notification-header {
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #333;
+
+    margin-bottom: 12px;
+}
+
+
+.notification-text {
+
+    font-size: 16px;
+
+    color: #555;
+
+    line-height: 1.6;
+}
+
+
+.tap {
+
+    margin-top: 15px;
+
+    color: #d6336c;
+
+    font-weight: bold;
+
+    text-align: right;
+
+    animation: blink 1.2s infinite;
+}
+
+
+/* -------------------------
+   MAIN MESSAGE
+------------------------- */
+
+.message {
+
+    display: none;
+
+    width: 450px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.96);
+
+    padding: 40px 25px;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.18);
+
+    position: relative;
+
+    z-index: 10;
+
+    animation: messagePop 0.7s ease;
+}
+
+
+.rakhi {
+
+    font-size: 80px;
+
+    animation: rakhiFloat 2s infinite ease-in-out;
+
+    margin-bottom: 15px;
+}
+
+
+h1 {
+
+    color: #d6336c;
+
+    line-height: 1.4;
+
+    margin-bottom: 12px;
+}
+
+
+.message p {
+
+    color: #777;
+
+    margin-bottom: 25px;
+
+    font-size: 17px;
+}
+
+
+/* -------------------------
+   BUTTONS
+------------------------- */
+
+.buttons {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    align-items: center;
+}
+
+
+button {
+
+    border: none;
+
+    padding: 16px 20px;
+
+    border-radius: 15px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.2s;
+}
+
+
+button:hover {
+
+    transform: scale(1.05);
+}
+
+
+.yes {
+
+    width: 100%;
+
+    background: #b9f6c9;
+
+    color: #176b2c;
+}
+
+
+.no {
+
+    width: 100%;
+
+    background: #ffd1d1;
+
+    color: #a52a2a;
+
+    position: relative;
+}
+
+
+#response {
+
+    margin-top: 25px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #d6336c;
+
+    line-height: 1.5;
+}
+
+
+/* Music */
+
+.musicButton {
+
+    margin-top: 25px;
+
+    background: #f7d8ff;
+
+    color: #8b2fa3;
+
+    font-size: 14px;
+}
+
+
+/* -------------------------
+   SURPRISE
+------------------------- */
+
+.surprise {
+
+    display: none;
+
+    width: 450px;
+
+    text-align: center;
+
+    background: white;
+
+    padding: 45px 25px;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.2);
+
+    position: relative;
+
+    z-index: 10;
+
+    animation: surprisePop 1s ease;
+}
+
+
+.big-rakhi {
+
+    font-size: 100px;
+
+    animation: spinRakhi 3s infinite;
+}
+
+
+.surprise h1 {
+
+    margin-top: 20px;
+
+    font-size: 30px;
+}
+
+
+.surprise p {
+
+    font-size: 20px;
+
+    line-height: 1.6;
+
+    color: #555;
+
+    margin-top: 20px;
+}
+
+
+.celebrate {
+
+    margin-top: 25px;
+
+    font-size: 30px;
+
+    animation: celebration 1s infinite;
+}
+
+
+/* -------------------------
+   FALLING HEARTS
+------------------------- */
+
+.heart {
+
+    position: absolute;
+
+    top: -50px;
+
+    font-size: 25px;
+
+    animation: fall linear forwards;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* -------------------------
+   ANIMATIONS
+------------------------- */
+
+@keyframes notificationPop {
+
+    from {
+
+        transform: scale(0.7);
+
+        opacity: 0;
+    }
+
+    to {
+
+        transform: scale(1);
+
+        opacity: 1;
+    }
+}
+
+
+@keyframes messagePop {
+
+    from {
+
+        transform: scale(0.7);
+
+        opacity: 0;
+    }
+
+    to {
+
+        transform: scale(1);
+
+        opacity: 1;
+    }
+}
+
+
+@keyframes surprisePop {
+
+    0% {
+
+        transform: scale(0.5);
+
+        opacity: 0;
+    }
+
+    70% {
+
+        transform: scale(1.1);
+    }
+
+    100% {
+
+        transform: scale(1);
+
+        opacity: 1;
+    }
+}
+
+
+@keyframes rakhiFloat {
+
+    0%, 100% {
+
+        transform: translateY(0);
+    }
+
+    50% {
+
+        transform: translateY(-15px);
+    }
+}
+
+
+@keyframes spinRakhi {
+
+    0% {
+
+        transform: rotate(-10deg);
+    }
+
+    50% {
+
+        transform: rotate(10deg);
+    }
+
+    100% {
+
+        transform: rotate(-10deg);
+    }
+}
+
+
+@keyframes blink {
+
+    0%, 100% {
+
+        opacity: 1;
+    }
+
+    50% {
+
+        opacity: 0.4;
+    }
+}
+
+
+@keyframes celebration {
+
+    0%, 100% {
+
+        transform: scale(1);
+    }
+
+    50% {
+
+        transform: scale(1.2);
+    }
+}
+
+
+@keyframes fall {
+
+    from {
+
+        transform:
+            translateY(-50px)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    to {
+
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
